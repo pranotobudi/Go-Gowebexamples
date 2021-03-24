@@ -16,7 +16,7 @@ func main() {
 		page := vars["page"]
 
 		fmt.Fprintf(w, "You've requested the book: %s on page %s\n", title, page)
-	})
+	}).Schemes("http")
 
 	http.ListenAndServe(":80", r)
 }
